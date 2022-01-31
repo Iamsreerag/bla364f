@@ -52,7 +52,7 @@ I Guess This Will Be Usefull For Many People.....😇.
 **Thanks to [Erich](https://t.me/ErichDaniken) and his [InFoTel](https://t.me/InFoTel_Group) for this Video**
 
 #### Deploy on Railway
-
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fvyshnav2das%2Fbla364&plugins=postgresql&envs=TG_BOT_TOKEN%2COWNER_ID%2CAPP_ID%2CAPI_HASH%2CCHANNEL_ID%2CFORCE_SUB_CHANNEL%2CADMINS%2CDISABLE_CHANNEL_BUTTON&DISABLE_CHANNEL_BUTTONDefault=True)
 #### Deploy in your VPS
 ````bash
 git clone https://github.com
