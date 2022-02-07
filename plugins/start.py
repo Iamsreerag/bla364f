@@ -105,22 +105,26 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("Movies Channel 📀", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl"),
+                    InlineKeyboardButton("Movies Group 🎬", url="https://t.me/malayayalies")
+                ],
+                [
+                    InlineKeyboardButton("Series Channel 🎟️", url="https://t.me/mc_series_c"),
+                    InlineKeyboardButton("Series Group 🍿", url="https://t.me/mc_serie")
                 ]
             ]
-         )
-        await message.reply_photo(chat_id=message.from_user.id, 
-            photo=random.choice(SREERAG), 
-            caption="""Hi 🇸 🇷 🇪 🇪 🇷 🇦 🇬  ഞാൻ ഒരു  𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐎𝐓 ആണ്, എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാൻ നോക്കി സമയം കളയണ്ട, എന്നെ MALAYALAM CINEMA ഗ്രൂപ്പിൽ മാത്രമേ ആഡ് ചെയ്യാൻ കഴിയൂ...!!! :)""", 
+        )
+        await client.send_photo(chat_id=message.from_user.id,
+            photo=random.choice(PHOTO),
+            caption=START_MSG.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
-       reply_markup = reply_markup
-       )
+            reply_markup = reply_markup
+        )
         return
 
 @Bot.on_message(filters.command('start') & filters.private)
