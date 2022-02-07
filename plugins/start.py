@@ -110,7 +110,7 @@ async def start_command(client: Client, message: Message):
                 ]
             ]
         )
-        await message.reply_photo(
+        await message.reply_photo(chat_id=message.from_user.id, 
             photo=random.choice(SREERAG), 
             caption="""Hi 🇸 🇷 🇪 🇪 🇷 🇦 🇬  ഞാൻ ഒരു  𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐎𝐓 ആണ്, എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാൻ നോക്കി സമയം കളയണ്ട, എന്നെ MALAYALAM CINEMA ഗ്രൂപ്പിൽ മാത്രമേ ആഡ് ചെയ്യാൻ കഴിയൂ...!!! :)""", 
                 first = message.from_user.first_name,
@@ -119,6 +119,7 @@ async def start_command(client: Client, message: Message):
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
+            reply_markup = reply_markup
         )
         return
 
