@@ -28,7 +28,7 @@ HEISENBERGH = [
 ]
 
 
-@Bot.on_message(filters.command('start') & filters.private & subscribed)
+@Bot.on_message(filters.command('start'))
 async def start_command(client: Client, message: Message): 
     await message.reply_photo(
             photo =random.choice(HEISENBERG),
