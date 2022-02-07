@@ -119,7 +119,6 @@ async def start_command(client: Client, message: Message):
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
-            quote = True
         )
         return
 
