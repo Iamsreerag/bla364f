@@ -21,13 +21,13 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 #=====================================================================================##
 
 SREERAG = [
- "", 
- "", 
- "", 
- "", 
- "", 
- "", 
- ""
+ "https://telegra.ph/file/cae6bf1e9db000443794e.jpg", 
+ "https://telegra.ph/file/934d4df133aad19380956.jpg", 
+ "https://telegra.ph/file/11346bbccdbb1a2b3e7d0.jpg", 
+ "https://telegra.ph/file/d16ac3ddc79bbf1f7a57a.jpg", 
+ "https://telegra.ph/file/7fcee479de6c179ca790e.jpg", 
+ "https://telegra.ph/file/7ef75ec8997c78815374e.jpg", 
+ "https://telegra.ph/file/a735feccf22da26944be0.jpg"
 ]
 
 
