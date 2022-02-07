@@ -1,4 +1,5 @@
 #(©)CodeXBotz
+import random
 import os
 import asyncio
 from pyrogram import Client, filters, __version__
@@ -18,6 +19,20 @@ WAIT_MSG = """"<b>Processing ...</b>"""
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
 
 #=====================================================================================##
+
+SREERAG = [
+ "", 
+ "", 
+ "", 
+ "", 
+ "", 
+ "", 
+ ""
+]
+
+
+
+
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -95,8 +110,9 @@ async def start_command(client: Client, message: Message):
                 ]
             ]
         )
-        await message.reply_text(
-            text = START_MSG.format(
+        await message.reply_photo(
+            photo=random.choice(SREERAG), 
+            caption=START_MESSAGE.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
