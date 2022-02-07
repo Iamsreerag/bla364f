@@ -112,7 +112,7 @@ async def start_command(client: Client, message: Message):
         )
         await message.reply_photo(
             photo=random.choice(SREERAG), 
-            caption=START_MESSAGE.format(
+            caption="""Hi 🇸 🇷 🇪 🇪 🇷 🇦 🇬  ഞാൻ ഒരു  𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐎𝐓 ആണ്, എന്നെ നിങ്ങളുടെ ഗ്രൂപ്പിൽ ആഡ് ചെയ്യാൻ നോക്കി സമയം കളയണ്ട, എന്നെ MALAYALAM CINEMA ഗ്രൂപ്പിൽ മാത്രമേ ആഡ് ചെയ്യാൻ കഴിയൂ...!!! :)""", 
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
