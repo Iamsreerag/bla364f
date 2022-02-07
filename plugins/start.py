@@ -1,5 +1,6 @@
 #(©)CodeXBotz
 import os
+import random
 import asyncio
 from pyrogram import Client, filters, __version__
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
@@ -18,6 +19,13 @@ WAIT_MSG = """"<b>Processing ...</b>"""
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
 
 #=====================================================================================##
+HEISENBERGH = [
+ "https://telegra.ph/file/cae6bf1e9db000443794e.jpg", 
+ "https://telegra.ph/file/934d4df133aad19380956.jpg", 
+ "https://telegra.ph/file/11346bbccdbb1a2b3e7d0.jpg", 
+ "https://telegra.ph/file/d16ac3ddc79bbf1f7a57a.jpg", 
+ "https://telegra.ph/file/7ef75ec8997c78815374e.jpg"
+]
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -95,8 +103,9 @@ async def start_command(client: Client, message: Message):
                 ]
             ]
         )
-        await message.reply_text(
-            text = START_MSG.format(
+        await message.reply_photo(
+            photo =random.choice(HEISENBERG), 
+                (
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
                 username = None if not message.from_user.username else '@' + message.from_user.username,
@@ -104,7 +113,7 @@ async def start_command(client: Client, message: Message):
                 id = message.from_user.id
             ),
             reply_markup = reply_markup,
-            disable_web_page_preview = True,
+            disable_web_page_preview = false,
             quote = True
         )
         return
